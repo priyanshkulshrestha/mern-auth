@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
 // import ilustl from '../resourse/login.png'
 import ilustl from '../resourse/sign-up.png'
-import { Link, useHistory } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Login = () => {
-    const history = useHistory();
+    const Navigate = useNavigate();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
@@ -26,7 +26,7 @@ const Login = () => {
             window.alert('Invlid Credential');
         } else {
             window.alert('Login Successfully');
-            history.push('/')
+            Navigate('/')
         }
     }
     return (
